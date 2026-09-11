@@ -1,0 +1,120 @@
+CRITICAL - 2026-09-10 15:40:33 --> CodeIgniter\Exceptions\InvalidArgumentException: Invalid primary key: '0' is not allowed.
+[Method: GET, Route: eliminar/0]
+in SYSTEMPATH\BaseModel.php on line 833.
+ 1 SYSTEMPATH\BaseModel.php(818): CodeIgniter\BaseModel->validateID('0', false)
+ 2 SYSTEMPATH\BaseModel.php(1191): CodeIgniter\BaseModel->validateID([...])
+ 3 APPPATH\Controllers\EmpleadosController.php(59): CodeIgniter\BaseModel->delete([...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\EmpleadosController->eliminar('0')
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-10 15:44:01 --> CodeIgniter\Exceptions\InvalidArgumentException: Invalid primary key: '0' is not allowed.
+[Method: GET, Route: eliminar/0]
+in SYSTEMPATH\BaseModel.php on line 833.
+ 1 SYSTEMPATH\BaseModel.php(818): CodeIgniter\BaseModel->validateID('0', false)
+ 2 SYSTEMPATH\BaseModel.php(1191): CodeIgniter\BaseModel->validateID([...])
+ 3 APPPATH\Controllers\EmpleadosController.php(59): CodeIgniter\BaseModel->delete([...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\EmpleadosController->eliminar('0')
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-10 15:44:26 --> CodeIgniter\Exceptions\InvalidArgumentException: Invalid primary key: '0' is not allowed.
+[Method: GET, Route: eliminar/0]
+in SYSTEMPATH\BaseModel.php on line 833.
+ 1 SYSTEMPATH\BaseModel.php(818): CodeIgniter\BaseModel->validateID('0', false)
+ 2 SYSTEMPATH\BaseModel.php(1191): CodeIgniter\BaseModel->validateID([...])
+ 3 APPPATH\Controllers\EmpleadosController.php(59): CodeIgniter\BaseModel->delete([...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\EmpleadosController->eliminar('0')
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-10 15:45:51 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (\'\', \'Erick\', \'Batz\', \'guatemala,guatemala\', \'erick@gmail.com\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (\'\', \'Erick\', \'Batz\', \'guatemala,guatemala\', \'erick@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (\'\', \'Erick\', \'Batz\', \'guatemala,guatemala\', \'erick@gmail.com\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (:codigo_empleado:, :nombre:, :apellido:, :direccion:, :email:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\EmpleadosController.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\EmpleadosController->insertar()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-10 15:45:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: insertar]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (:codigo_empleado:, :nombre:, :apellido:, :direccion:, :email:)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\EmpleadosController.php(53): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\EmpleadosController->insertar()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-10 15:45:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (\'\', \'Erick\', \'Batz\', \'guatemala,guatemala\', \'erick@gmail.com\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (\'\', \'Erick\', \'Batz\', \'guatemala,guatemala\', \'erick@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (:codigo_empleado:, :nombre:, :apellido:, :direccion:, :email:)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\EmpleadosController.php(53): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\EmpleadosController->insertar()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-10 15:45:51 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (\'\', \'Erick\', \'Batz\', \'guatemala,guatemala\', \'erick@gmail.com\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (\'\', \'Erick\', \'Batz\', \'guatemala,guatemala\', \'erick@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (\'\', \'Erick\', \'Batz\', \'guatemala,guatemala\', \'erick@gmail.com\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `empleados` (`codigo_empleado`, `nombre`, `apellido`, `direccion`, `email`) VALUES (:codigo_empleado:, :nombre:, :apellido:, :direccion:, :email:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\EmpleadosController.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\EmpleadosController->insertar()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-10 16:50:04 --> ArgumentCountError: Too few arguments to function App\Controllers\EstudiantesController::eliminar(), 0 passed in C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php on line 974 and exactly 1 expected
+[Method: GET, Route: eliminarEstudiante/2013001]
+in APPPATH\Controllers\EstudiantesController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\EstudiantesController->eliminar()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-10 17:47:00 --> ErrorException: Undefined array key "Carne_alumno"
+[Method: GET, Route: bucarEstudiante/2013003]
+in APPPATH\Views\estudiantes_editar.php on line 14.
+ 1 APPPATH\Views\estudiantes_editar.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Carne_alumno"', 'C:\\xampp\\htdocs\\fs2026\\ci4_biblioteca\\app\\Views\\estudiantes_editar.php', 14)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\fs2026\\ci4_biblioteca\\app\\Views\\estudiantes_editar.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('estudiantes_editar', [], true)
+ 5 APPPATH\Controllers\EstudiantesController.php(34): view('estudiantes_editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\EstudiantesController->buscarId('2013003')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EstudiantesController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

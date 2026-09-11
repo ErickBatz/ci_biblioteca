@@ -1,0 +1,173 @@
+CRITICAL - 2026-09-11 14:48:00 --> ErrorException: Undefined array key "codigo_empleado"
+[Method: GET, Route: libros]
+in APPPATH\Views\libros.php on line 89.
+ 1 APPPATH\Views\libros.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo_empleado"', 'C:\\xampp\\htdocs\\fs2026\\ci4_biblioteca\\app\\Views\\libros.php', 89)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\fs2026\\ci4_biblioteca\\app\\Views\\libros.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('libros', [], true)
+ 5 APPPATH\Controllers\LibrosController.php(16): view('libros', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\LibrosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-11 15:10:27 --> ArgumentCountError: Too few arguments to function App\Controllers\LibrosController::buscarId(), 0 passed in C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php on line 974 and exactly 1 expected
+[Method: GET, Route: buscarLibro/100002]
+in APPPATH\Controllers\LibrosController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\LibrosController->buscarId()
+ 2 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-11 15:11:33 --> ErrorException: Undefined array key "numerp_paginas"
+[Method: GET, Route: buscarLibro/100002]
+in APPPATH\Views\libros_editar.php on line 26.
+ 1 APPPATH\Views\libros_editar.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "numerp_paginas"', 'C:\\xampp\\htdocs\\fs2026\\ci4_biblioteca\\app\\Views\\libros_editar.php', 26)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\fs2026\\ci4_biblioteca\\app\\Views\\libros_editar.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('libros_editar', [], true)
+ 5 APPPATH\Controllers\LibrosController.php(22): view('libros_editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\LibrosController->buscarId('100002')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-11 15:11:41 --> ErrorException: Undefined array key "numerp_paginas"
+[Method: GET, Route: buscarLibro/100002]
+in APPPATH\Views\libros_editar.php on line 26.
+ 1 APPPATH\Views\libros_editar.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "numerp_paginas"', 'C:\\xampp\\htdocs\\fs2026\\ci4_biblioteca\\app\\Views\\libros_editar.php', 26)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\fs2026\\ci4_biblioteca\\app\\Views\\libros_editar.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('libros_editar', [], true)
+ 5 APPPATH\Controllers\LibrosController.php(22): view('libros_editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\LibrosController->buscarId('100002')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-11 16:42:32 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bd_biblioteca', 3306, '', 0)
+#1 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fs2026\ci4_biblioteca\app\Controllers\LibrosController.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(974): App\Controllers\LibrosController->index()
+#8 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+#9 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2026\ci4_biblioteca\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\fs2026\ci4_biblioteca\app\Controllers\LibrosController.php(15): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(974): App\Controllers\LibrosController->index()
+#7 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+#8 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\fs2026\ci4_biblioteca\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-09-11 16:42:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: libros]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `libros`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\LibrosController.php(15): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\LibrosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-09-11 16:42:43 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'bd_biblioteca', 3306, '', 0)
+#1 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fs2026\ci4_biblioteca\app\Controllers\LibrosController.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(974): App\Controllers\LibrosController->index()
+#8 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+#9 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2026\ci4_biblioteca\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\fs2026\ci4_biblioteca\app\Controllers\LibrosController.php(15): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(974): App\Controllers\LibrosController->index()
+#7 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+#8 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\fs2026\ci4_biblioteca\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\fs2026\ci4_biblioteca\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-09-11 16:42:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: libros]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `libros`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\LibrosController.php(15): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\LibrosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LibrosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-11 17:21:41 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "presamo_editar.php"
+[Method: GET, Route: buscarPrestamo/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('presamo_editar.php')
+ 2 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('presamo_editar', [], true)
+ 3 APPPATH\Controllers\PrestamosController.php(21): view('presamo_editar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\PrestamosController->buscarId('1')
+ 5 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-11 17:22:29 --> ErrorException: Undefined array key "tamanio"
+[Method: GET, Route: buscarPrestamo/1]
+in APPPATH\Views\prestamo_editar.php on line 29.
+ 1 APPPATH\Views\prestamo_editar.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tamanio"', 'C:\\xampp\\htdocs\\fs2026\\ci4_biblioteca\\app\\Views\\prestamo_editar.php', 29)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\fs2026\\ci4_biblioteca\\app\\Views\\prestamo_editar.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('prestamo_editar', [], true)
+ 5 APPPATH\Controllers\PrestamosController.php(21): view('prestamo_editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\PrestamosController->buscarId('1')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrestamosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
