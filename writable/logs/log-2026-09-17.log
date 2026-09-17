@@ -1,0 +1,62 @@
+ERROR - 2026-09-17 01:56:43 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\fs2026\ci_biblioteca\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_biblioteca', 3306, '', 0)
+#1 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fs2026\ci_biblioteca\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fs2026\ci_biblioteca\app\Controllers\EmpleadosController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fs2026\ci_biblioteca\system\CodeIgniter.php(974): App\Controllers\EmpleadosController->index()
+#8 C:\xampp\htdocs\fs2026\ci_biblioteca\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+#9 C:\xampp\htdocs\fs2026\ci_biblioteca\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2026\ci_biblioteca\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\fs2026\ci_biblioteca\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\fs2026\ci_biblioteca\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\fs2026\ci_biblioteca\app\Controllers\EmpleadosController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\fs2026\ci_biblioteca\system\CodeIgniter.php(974): App\Controllers\EmpleadosController->index()
+#7 C:\xampp\htdocs\fs2026\ci_biblioteca\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+#8 C:\xampp\htdocs\fs2026\ci_biblioteca\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\fs2026\ci_biblioteca\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\fs2026\ci_biblioteca\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2026-09-17 01:56:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: empleados]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `empleados`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\EmpleadosController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\EmpleadosController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpleadosController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-09-17 02:26:27 --> ErrorException: Undefined array key "codigo_Editorial"
+[Method: GET, Route: buscarEditorial/100]
+in APPPATH\Views\editorial_editar.php on line 14.
+ 1 APPPATH\Views\editorial_editar.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo_Editorial"', 'C:\\xampp\\htdocs\\fs2026\\ci_biblioteca\\app\\Views\\editorial_editar.php', 14)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\xampp\\htdocs\\fs2026\\ci_biblioteca\\app\\Views\\editorial_editar.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1268): CodeIgniter\View\View->render('editorial_editar', [], true)
+ 5 APPPATH\Controllers\EditorialesController.php(24): view('editorial_editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\EditorialesController->buscarid('100')
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EditorialesController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

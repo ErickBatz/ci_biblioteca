@@ -4,6 +4,7 @@ use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
 $routes->get('/', 'Home::index');
+/*Rutas de empleados*/
 $routes->get('empleados', 'EmpleadosController::index');
 $routes->get('eliminar/(:num)', 'EmpleadosController::eliminar/$1');
 $routes->get('buscar/(:num)', 'EmpleadosController::buscarId/$1');
@@ -30,3 +31,8 @@ $routes->get('buscarPrestamo/(:num)', 'PrestamosController::buscarId/$1');
 $routes->post('actualizarPrestamo', 'PrestamosController::actualizar');
 $routes->post('insertarPrestamo', 'PrestamosController::insertar');
 $routes->get('eliminarPrestamo/(:num)', 'PrestamosController::eliminar/$1');
+
+/*Rutas de Editoriales*/
+$routes->get('editoriales','EditorialesController::index');
+$routes->get('buscarEditorial/(:num)','EditorialesController::buscarId/$1');
+$routes->post('actualizarEditorial','EditorialesController::actualizar');
