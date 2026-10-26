@@ -1,61 +1,96 @@
-# CodeIgniter 4 Framework
+# Sistema de gestión de biblioteca
 
-## What is CodeIgniter?
+Aplicación web para administrar información de una biblioteca escolar. Permite consultar y mantener el catálogo de libros, registrar préstamos y gestionar los datos de estudiantes, empleados y editoriales.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+El proyecto está desarrollado en PHP con CodeIgniter 4 y usa MySQL/MariaDB. La interfaz está en español y cuenta con un panel principal para acceder a los módulos.
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Módulos
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+- **Libros:** registro, consulta, edición y eliminación de libros.
+- **Préstamos:** seguimiento de préstamos asociados a libros, estudiantes y empleados.
+- **Estudiantes:** consulta y mantenimiento de los registros de estudiantes.
+- **Empleados:** consulta y mantenimiento de los registros del personal.
+- **Editoriales:** consulta y edición de información de editoriales.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Las tablas de autores, grados y estados también están definidas en el archivo SQL; actualmente no tienen módulos en el menú principal.
 
-## Important Change with index.php
+## Tecnologías
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+- PHP 8.2 o superior
+- CodeIgniter 4
+- MySQL o MariaDB
+- HTML, CSS y Bootstrap
+- Composer
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## Requisitos
 
-**Please** read the user guide for a better explanation of how CI4 works!
+- PHP 8.2+ con las extensiones `intl`, `mbstring` y `mysqli` habilitadas.
+- Composer.
+- MySQL o MariaDB (por ejemplo, el que incluye XAMPP).
+- Apache con `mod_rewrite` habilitado si se ejecuta mediante XAMPP.
 
-## Repository Management
+## Instalación local con XAMPP
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+1. Clona o copia este repositorio dentro de la carpeta `htdocs` de XAMPP.
+2. Inicia Apache y MySQL desde el panel de XAMPP.
+3. Instala las dependencias desde la carpeta del proyecto:
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+   ```bash
+   composer install
+   ```
 
-## Contributing
+4. Abre phpMyAdmin, importa el archivo `bd_biblioteca.sql` y confirma que se haya creado la base de datos `db_biblioteca`.
+5. Revisa la conexión en `app/Config/Database.php`. La configuración local incluida usa `localhost`, el usuario `root`, contraseña vacía y la base `db_biblioteca`. Ajusta estos datos si tu instalación es distinta.
+6. Revisa `app/Config/App.php` y configura `baseURL` para que coincida con la dirección local del proyecto. La configuración actual apunta a `http://localhost/fs2026/ci_biblioteca/public/`.
+7. Abre la dirección del proyecto en el navegador. Con la ubicación anterior, la página inicial es:
 
-We welcome contributions from the community.
+   ```text
+   http://localhost/fs2026/ci_biblioteca/public/
+   ```
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+También puedes iniciar el servidor de desarrollo de CodeIgniter desde la raíz del proyecto:
 
-## Server Requirements
+```bash
+php spark serve
+```
 
-PHP version 8.2 or higher is required, with the following extensions installed:
+Luego visita `http://localhost:8080`.
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+## Rutas principales
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
+Las rutas se declaran en `app/Config/Routes.php` y conectan las URL con los controladores:
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+| URL | Controlador | Uso |
+| --- | --- | --- |
+| `/` | `Home::index` | Panel principal |
+| `/libros` | `LibrosController::index` | Catálogo de libros |
+| `/prestamos` | `PrestamosController::index` | Registros de préstamos |
+| `/estudiantes` | `EstudiantesController::index` | Registros de estudiantes |
+| `/empleados` | `EmpleadosController::index` | Registros de empleados |
+| `/editoriales` | `EditorialesController::index` | Registros de editoriales |
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Las acciones de creación, actualización y eliminación se resuelven con rutas adicionales definidas en ese mismo archivo.
+
+## Estructura del proyecto
+
+```text
+app/
+  Config/       Configuración y rutas
+  Controllers/  Controladores de los módulos
+  Models/       Modelos para acceder a la base de datos
+  Views/        Panel, listados y formularios
+public/
+  css/          Estilos de la aplicación
+  index.php     Punto de entrada web de CodeIgniter
+bd_biblioteca.sql  Estructura y datos iniciales de la base de datos
+```
+
+## Base de datos
+
+El archivo `bd_biblioteca.sql` crea la base `db_biblioteca` y contiene tablas para libros, préstamos, estudiantes, empleados, editoriales, autores, grados y estados. También incluye datos de ejemplo; revísalos y reemplázalos antes de usar o publicar una copia con información propia.
+
+## Notas
+
+- Este proyecto es una aplicación académica/local y no incluye autenticación de usuarios.
+- Las funciones disponibles dependen de las rutas implementadas para cada módulo; consulta `app/Config/Routes.php` y los controladores para ver el detalle.
+- No publiques contraseñas reales ni datos personales en el repositorio.

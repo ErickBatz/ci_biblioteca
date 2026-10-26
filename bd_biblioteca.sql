@@ -20,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bd_biblioteca`
 --
-CREATE DATABASE IF NOT EXISTS fs2026_biblioteca;
-USE fs2026_biblioteca;
+CREATE DATABASE IF NOT EXISTS db_biblioteca;
+USE db_biblioteca;
 -- --------------------------------------------------------
 
 --
