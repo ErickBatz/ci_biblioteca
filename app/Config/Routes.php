@@ -36,3 +36,18 @@ $routes->get('eliminarPrestamo/(:num)', 'PrestamosController::eliminar/$1');
 $routes->get('editoriales','EditorialesController::index');
 $routes->get('buscarEditorial/(:num)','EditorialesController::buscarId/$1');
 $routes->post('actualizarEditorial','EditorialesController::actualizar');
+$routes->get('eliminarEditorial/(:num)', 'EditorialesController::eliminar/$1');
+
+/*Rutas de Autores*/
+$routes->get('autores', 'AutoresController::index');
+$routes->get('buscarAutor/(:num)', 'AutoresController::buscarId/$1');
+$routes->post('actualizarAutor', 'AutoresController::actualizar');
+$routes->post('insertarAutor', 'AutoresController::insertar');
+$routes->get('eliminarAutor/(:num)', 'AutoresController::eliminar/$1');
+
+/*Rutas de Estados*/
+$routes->get('estados', 'EstadosController::index');
+$routes->get('buscarEstado/(:num)', 'EstadosController::buscarId/$1');
+$routes->post('actualizarEstado', 'EstadosController::actualizar');
+$routes->post('insertarEstado', 'EstadosController::insertar');
+$routes->get('eliminarEstado/(:num)', 'EstadosController::eliminar/$1');

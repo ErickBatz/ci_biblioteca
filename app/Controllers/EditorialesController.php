@@ -43,5 +43,13 @@ class EditorialesController extends BaseController
         $editorial->update($codigo,$datos);
         return $this->index();
     }
+
+    public function eliminar($codigo)
+    {
+        $editorial = new EditorialesModel();
+        $editorial->delete($codigo);
+
+        return $this->index();
+    }
     
 }
