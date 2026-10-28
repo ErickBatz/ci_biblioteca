@@ -1,5 +1,7 @@
 # Sistema de gestión de biblioteca
 
+**Demo en vivo:** [Ver el sistema de biblioteca](https://biblioteca-app.gt.tc/public/index.php)
+
 Aplicación web para administrar información de una biblioteca escolar. Permite consultar y mantener el catálogo de libros, registrar préstamos y gestionar los datos de estudiantes, empleados y editoriales.
 
 El proyecto está desarrollado en PHP con CodeIgniter 4 y usa MySQL/MariaDB. La interfaz está en español y cuenta con un panel principal para acceder a los módulos.
